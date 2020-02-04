@@ -2,10 +2,10 @@
 A collection of small(ish) projects made in Processing
 
 Here is what each project does:
-Double_Pendulem -- visual simulation replicating the physics of a double pendulem
-Drawing_Knots -- drawing knots in 3d space based off of their mathematical equations
-Flying_Over_Mountains -- simulation of mountains that appear as if the viewer is flying over them
-Fractal_Circles -- recursively draw fractal circles
+1. Double_Pendulem -- visual simulation replicating the physics of a double pendulem
+2. Drawing_Knots -- drawing knots in 3d space based off of their mathematical equations
+3. Flying_Over_Mountains -- simulation of mountains that appear as if the viewer is flying over them
+4. Fractal_Circles -- recursively draw fractal circles
 
 HackerRank_Basic_Stats -- writing out some basic code for a hacker rank problem
 
