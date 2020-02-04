@@ -1,0 +1,66 @@
+public static int numDarts = 20000;
+public static int[] xArr = new int[numDarts];
+public static int[] yArr = new int[numDarts];
+
+void setup()
+{
+  size(1020, 1020);
+  int side = width;
+
+  pushStyle();
+  background(255, 255, 255);
+  stroke(0, 100, 100);
+  strokeWeight(6);
+  noFill();
+  rectMode(CENTER);
+  rect(side/2, side/2, side, side);
+  ellipseMode(CENTER);
+  ellipse(side/2, side/2, side, side);
+  popStyle();
+
+  darts(numDarts);
+  System.out.println("There are " + dartsInCircle(numDarts) + " 'darts' in the circle out of a total of " + numDarts + " 'darts' ");
+  System.out.println( computingPi(numDarts) );
+ 
+}
+
+void darts(int numDarts)
+{
+  int side = width;
+  for (int i = 0; i < numDarts; i++)
+  {
+    int ranX = (int)random(1, side);
+    int ranY = (int)random(1, side);
+    xArr[i] = ranX;
+    yArr[i] = ranY;
+    pushStyle();    
+    fill(255, 0, 0, 100);
+    ellipseMode(CENTER);
+    ellipse(ranX, ranY, 10, 10);
+    popStyle();
+  }
+}
+
+int dartsInCircle(int numDarts)
+{
+  int side = width;
+  int rad = side/2;
+  int count = 0;
+  
+  for (int i = 0; i < numDarts; i++)
+  {
+    int xDiff = xArr[i]-rad;
+    int yDiff = yArr[i]-rad;
+    int pointToCenter = (int)Math.sqrt(xDiff*xDiff + yDiff*yDiff);
+    if (pointToCenter <= rad)
+      count++;
+  }
+  return count;
+}
+
+double computingPi(int numDarts)
+{
+  double dartsInCircle = (double)dartsInCircle(numDarts);
+  double pi = 4 * dartsInCircle / numDarts;
+  return pi;
+}
