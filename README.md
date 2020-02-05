@@ -1,5 +1,5 @@
-# Processing-Java-Projects
-A collection of small(ish) projects made in Processing
+# Small Java Projects
+A collection of small(ish) projects made in Processing, a Java-based IDE
 
 Here is what each project does:
 1. Double_Pendulem -- visual simulation replicating the physics of a double pendulem
